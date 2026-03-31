@@ -2,6 +2,21 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '../../components/Navbar'
 
+const useCases = [
+  {
+    title: 'Automated QA Testing',
+    description: 'Test your entire email verification flow automatically on every deploy without manually checking inboxes.',
+  },
+  {
+    title: 'Agent Account Creation',
+    description: 'Give your AI agent the ability to sign up for any service autonomously, no human needed to complete verification.',
+  },
+  {
+    title: 'Multi-Account Workflows',
+    description: 'Spin up dozens of verified accounts programmatically in minutes instead of hours.',
+  },
+]
+
 const steps = [
   'Creates a fresh AgentMail inbox via API',
   'Triggers signup flow with that inbox as the email',
@@ -140,6 +155,18 @@ export default function TwoFATestingPage() {
                 </li>
               ))}
             </ol>
+          </Section>
+
+          {/* Use Cases */}
+          <Section title="Use Cases">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              {useCases.map((uc, i) => (
+                <div key={i}>
+                  <span style={{ fontSize: '0.9rem', fontWeight: 600, color: '#ffffff' }}>{uc.title}: </span>
+                  <span style={{ fontSize: '0.9rem', color: '#cccccc', lineHeight: 1.6 }}>{uc.description}</span>
+                </div>
+              ))}
+            </div>
           </Section>
 
           {/* Clone */}

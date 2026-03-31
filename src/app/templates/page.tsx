@@ -140,31 +140,31 @@ export default function TemplatesPage() {
                 </div>
               )}
               <div style={{ marginBottom: '0.75rem' }}>
-                {tpl.recommended && (
-                  <div style={{
-                    display: 'inline-block',
-                    padding: '0.2rem 0.6rem',
-                    border: '1px solid rgba(250,204,21,0.3)',
-                    borderRadius: '4px',
-                    fontSize: '0.6rem',
-                    color: '#facc15',
-                    letterSpacing: '0.12em',
-                    textTransform: 'uppercase',
-                    marginBottom: '0.75rem',
-                    fontWeight: 700,
-                    background: 'rgba(250,204,21,0.06)',
-                  }}>
-                    Recommended by Adi
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                  <div style={{ width: '28px', height: '28px', opacity: 0.5 }}>
+                    <Image
+                      src="/agentmail-icon.svg"
+                      alt=""
+                      width={28}
+                      height={28}
+                      style={{ filter: 'invert(1)' }}
+                    />
                   </div>
-                )}
-                <div style={{ width: '28px', height: '28px', marginBottom: '1rem', opacity: 0.5 }}>
-                  <Image
-                    src="/agentmail-icon.svg"
-                    alt=""
-                    width={28}
-                    height={28}
-                    style={{ filter: 'invert(1)' }}
-                  />
+                  {tpl.recommended && (
+                    <div style={{
+                      padding: '0.2rem 0.6rem',
+                      border: '1px solid rgba(250,204,21,0.3)',
+                      borderRadius: '4px',
+                      fontSize: '0.6rem',
+                      color: '#facc15',
+                      letterSpacing: '0.12em',
+                      textTransform: 'uppercase',
+                      fontWeight: 700,
+                      background: 'rgba(250,204,21,0.06)',
+                    }}>
+                      Recommended by Adi
+                    </div>
+                  )}
                 </div>
                 <h3 style={{
                   fontSize: '1rem',
